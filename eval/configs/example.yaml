@@ -1,0 +1,31 @@
+# Standalone eval config.
+run:
+  parallel_mode: "thread"
+  max_workers: 20
+
+data:
+  prompts_file: "data/AIBench.jsonl"
+  inline_prompts: []
+  infer_records_file: "work_dirs/infer/example/gen_records.jsonl"
+  gt_image_root: "data/images"
+  out_dir: "work_dirs/eval/example"
+  records_file: "eval_records.jsonl"
+  metric_file: "eval_metric.json"
+
+eval:
+  role: "image_gen" # gt | blank | image_gen
+  tasks:
+    - "visual_qa"
+    - "aesthetic"
+  provider: "api"
+  max_new_tokens: 128
+  retry_times: 50
+  api:
+    - model: "Qwen3-VL-235B-A22B-Instruct"
+      api_base: "http://127.0.0.1:23333/v1"
+      api_key: "EMPTY"
+      timeout: 1800
+      temperature: 0.0
+
+logging:
+  level: "INFO"

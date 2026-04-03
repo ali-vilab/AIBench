@@ -1,0 +1,8 @@
+pyyaml
+pydantic
+Pillow
+tqdm
+requests
+openai
+dotenv
+unipercept-reward==1.0.3

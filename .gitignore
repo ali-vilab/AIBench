@@ -1,0 +1,20 @@
+# python generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# venv
+.venv
+
+.env
+*.log
+.vscode
+work_dirs
+data
+
+# Downloaded Papers
+cvpr2025_downloads/
+cvpr2025_downloads_test/

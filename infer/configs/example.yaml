@@ -1,0 +1,65 @@
+# Pure generate-only inference config.
+run:
+  parallel_mode: "thread"
+  max_workers: 40
+
+data:
+  prompts_file: "data/AIBench.jsonl"
+  inline_prompts: []
+  text_prompt_template: "Generate a framework figure based on the given paper method section.\n {method_text}"
+  out_dir: "work_dirs/infer/example"
+  exist_strategy: "skip"
+  records_file: "gen_records.jsonl"
+
+image_gen:
+  provider: "wan2.6"
+  gen_rewrite: true
+  retry_times: 30
+  return_n: 1
+
+  qwen_image:
+    - api_base: "https://dashscope.aliyuncs.com/api/v1/services/aigc/multimodal-generation/generation"
+      api_key: !env API_KEY_1
+      model: "qwen-image"
+
+  wan_2_5:
+    - api_base: "https://dashscope.aliyuncs.com/api/v1/services/aigc/text2image/image-synthesis"
+      api_key: !env API_KEY_1
+      model: "wan2.5-t2i-preview"
+
+  wan_2_6:
+    - api_base: "https://dashscope.aliyuncs.com/api/v1/services/aigc/image-generation/generation"
+      api_key: !env API_KEY_1
+      model: "wan2.6-t2i"
+    - api_base: "https://dashscope.aliyuncs.com/api/v1/services/aigc/image-generation/generation"
+      api_key: !env API_KEY_2
+      model: "wan2.6-t2i"
+    - api_base: "https://dashscope.aliyuncs.com/api/v1/services/aigc/image-generation/generation"
+      api_key: !env API_KEY_3
+      model: "wan2.6-t2i"
+    - api_base: "https://dashscope.aliyuncs.com/api/v1/services/aigc/image-generation/generation"
+      api_key: !env API_KEY_4
+      model: "wan2.6-t2i"
+
+  nano_banana:
+    - api_base: ""
+      api_key: !env API_KEY_1
+      model: "gemini-3-pro-image-preview"
+
+  gpt_image_1_5:
+    - api_base: ""
+      api_key: !env API_KEY_1
+      model: "gpt-image-1"
+
+  seedream:
+    - api_base: ""
+      api_key: !env API_KEY_1
+      model: "seedream-4.0"
+
+  kling:
+    - api_base: ""
+      api_key: !env API_KEY_1
+      model: "kling-v3"
+
+logging:
+  level: "INFO"
