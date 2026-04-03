@@ -181,3 +181,16 @@ Outputs:
 - Do not commit secrets; inject keys through `.env` or shell environment variables
 - Tune `max_workers` and `retry_times` based on your compute resources and rate limits
 
+
+## Citation
+
+If you find this code useful for your research, please cite our paper:
+
+```bibtex
+@article{liao2025aibench,
+  title={AIBench: Evaluating Visual-Logical Consistency in Academic Illustration Generation},
+  author={Liao, Zhaohe and Jiang, Kaixun and Liu, Zhihang and Wei, Yujie and Yu, Junqiu and Li, Quanhao and Yu, Hongtao and Li, Pandeng and Wang, Yuzheng and Xing, Zhen and Zhang, Shiwei and Xie, Chen-Wei and Zheng, Yun and Liu, Xihui},
+  journal={arXiv preprint arXiv:2603.28068},
+  year={2026}
+}
+```
