@@ -1,5 +1,9 @@
 # AIBench
 
+<p align="center">
+        💜 <a href="https://deep-kaixun.github.io/aibench-page/"><b>Project Page</b></a>&nbsp&nbsp | &nbsp&nbsp🤗 <a href="https://huggingface.co/datasets/lntzm/AIBench">Dataset</a>&nbsp&nbsp | &nbsp&nbsp📚 <a href="https://github.com/ali-vilab/AIBench">Code</a>&nbsp&nbsp | &nbsp&nbsp📑 <a href="https://arxiv.org/pdf/2603.28068">Paper</a>&nbsp&nbsp
+</p>
+
 AIBench is a benchmark and toolkit for evaluating **academic illustration generation**.  
 It focuses on whether modern image generation models can produce paper-ready method/framework figures that are both:
 
